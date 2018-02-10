@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Desktop Notifications</title>
+
+    <script src="desktopNotifications.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDxleQy4Dys84cWJjV90fwqFqt24fImM1Q",
+            authDomain: "testnotification-d0d23.firebaseapp.com",
+            databaseURL: "https://testnotification-d0d23.firebaseio.com",
+            projectId: "testnotification-d0d23",
+            storageBucket: "",
+            messagingSenderId: "1078983920693"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+
+    <!-- Leave out Storage -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+
+    <script>
+        var config = {
+            // ...
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+<body>
+    <button onClick="notifyMe()">Notification</button>
+    
+</body>
+</html>
