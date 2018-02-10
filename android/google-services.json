@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "247446503279",
+    "firebase_url": "https://uncommon-hackgcm.firebaseio.com",
+    "project_id": "uncommon-hackgcm",
+    "storage_bucket": "uncommon-hackgcm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247446503279:android:842a148151bc8175",
+        "android_client_info": {
+          "package_name": "com.uncommon.jonat.listenhear"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247446503279-7tr43oqh1m8jpnqnadrj2tktruli6ag1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADs525nR2ULV-is2oSTwOfUoLkFb0U8LY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
