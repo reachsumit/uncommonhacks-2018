@@ -1,75 +1,68 @@
 
-// var notification;
+// Before anything else, ask to allow notifications
+window.onload = function() {
+    Notification.requestPermission();
+}
+
+var notification;
 // var key = "AIzaSyDxleQy4Dys84cWJjV90fwqFqt24fImM1Q";
 // var to = 'YOUR-IID-TOKEN';
 
 // // Retrieve Firebase Messaging object.
 // const messaging = firebase.messaging();
-// // messaging.requestPermission()
-// // .then(function() {
-// //   console.log('Notification permission granted.');
-// //   // TODO(developer): Retrieve an Instance ID token for use with FCM.
-// //   // ...
-// // })
-// // .catch(function(err) {
-// //   console.log('Unable to get permission to notify.', err);
-// // });
+// messaging.requestPermission()
+// .then(function() {
+//   console.log('Notification permission granted.');
+//   // TODO(developer): Retrieve an Instance ID token for use with FCM.
+//   // ...
+// })
+// .catch(function(err) {
+//   console.log('Unable to get permission to notify.', err);
+// });
 
+/*
+notificationObject structure:
 
+Notification.badge
+    The URL of the image used to represent the notification when there is not enough space to display the notification itself.
 
+Notification.body
+    The body string of the notification as specified in the options parameter of the constructor.
 
-// window.onload = function() {
-//     Notification.requestPermission();
-// }
+Notification.icon
+    The URL of the image used as an icon of the notification as specified in the options parameter of the constructor.
+Notification.image
+    The URL of an image to be displayed as part of the notification, as specified in the options parameter of the constructor.
+Notification.renotify
+    Specifies whether the user should be notified after a new notification replaces an old one.
+Notification.requireInteraction
+    A Boolean indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
+Notification.silent
+    Specifies whether the notification should be silent, i.e. no sounds or vibrations should be issued, regardless of the device settings.
+Notification.timestamp
+    Specifies the time at which a notification is created or applicable (past, present, or future).
+Notification.title
+    The title of the notification as specified in the first parameter of the constructor.
+Notification.vibrate
+    Specifies a vibration pattern for devices with vibration hardware to emit.
 
-// /*
-// notificationObject structure:
+Event handlers
+Notification.onclick
+    A handler for the click event. It is triggered each time the user clicks on the notification.
+Notification.onerror
+    A handler for the error event. It is triggered each time the notification encounters an error.
 
-// Notification.badge
-//     The URL of the image used to represent the notification when there is not enough space to display the notification itself.
-
-// Notification.body
-//     The body string of the notification as specified in the options parameter of the constructor.
-
-// Notification.icon
-//     The URL of the image used as an icon of the notification as specified in the options parameter of the constructor.
-// Notification.image
-//     The URL of an image to be displayed as part of the notification, as specified in the options parameter of the constructor.
-// Notification.renotify
-//     Specifies whether the user should be notified after a new notification replaces an old one.
-// Notification.requireInteraction
-//     A Boolean indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
-// Notification.silent
-//     Specifies whether the notification should be silent, i.e. no sounds or vibrations should be issued, regardless of the device settings.
-// Notification.timestamp
-//     Specifies the time at which a notification is created or applicable (past, present, or future).
-// Notification.title
-//     The title of the notification as specified in the first parameter of the constructor.
-// Notification.vibrate
-//     Specifies a vibration pattern for devices with vibration hardware to emit.
-
-// Event handlers
-// Notification.onclick
-//     A handler for the click event. It is triggered each time the user clicks on the notification.
-// Notification.onerror
-//     A handler for the error event. It is triggered each time the notification encounters an error.
-
-// */
+*/
 
 var testNotification = {
-    'title': 'Portugal vs. Denmark',
-    'body': '5 to 1',
-    'icon': 'firebase-logo.png',
-    'click_action': 'http://localhost:8081'
+    'title': 'Knock knock',
+    'body': 'Someone is at the door',
+    'icon': 'if_door_1055069.png'
+    // ,
+    // 'click_action': 'http://localhost:8081'
 };
 
 createNotification = function(notificationObject) {
-    // var notification = {
-    //   'title': notificationObject.title,
-    //   'body': notificationObject.body,
-    //   'icon': notificationObject.icon
-    // };
-    
     // fetch('https://fcm.googleapis.com/fcm/send', {
     //   'method': 'POST',
     //   'headers': {
@@ -85,7 +78,11 @@ createNotification = function(notificationObject) {
     // }).catch(function(error) {
     //   console.error(error);
     // })
-    var notification = new Notification("TEst");
+    var notificationOptions = {
+        body: notificationObject.body,
+        icon: notificationObject.icon
+    };
+    var notification = new Notification(notificationObject.title, notificationOptions);
 }
 
 notifyMe = function() {
