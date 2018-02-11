@@ -1,6 +1,6 @@
 # Listen Hear
 
-A system meant to visualize sounds that might otherwise go unnoticed in a deaf person's life. **CRASH** - **BOOM** - **CRACK** - a client (your phone, computer, Alexa, Echo, etc.) hears a distinct sound that our system thinks is important. The sound gets sent to our ever-expanding database, gets parsed, and triggers a message to notify you. All your devices get a popup: you phone's LED lights up, your smart bulbs blink, and a notification is sent to each device: *There's someone at your door!* Suddenly, a sense you may take for granted everyday becomes accessible to an entire group of people who don't.
+Sounds that might be important for people to react to might go unnoticed to a deaf person. **CRASH** - **BOOM** - **CRACK** - a client (your phone, computer, Alexa, Echo, etc.) hears a distinct sound that our system thinks is important. The sound gets sent to our ever-expanding database, gets parsed, and triggers a message to notify you. All your devices get a popup: you phone's LED lights up, your smart bulbs blink, and a notification is sent to each device: *There's someone at your door!* Suddenly, a sense you may take for granted everyday becomes accessible to an entire group of people who don't.
 
 ## Introduction
 
