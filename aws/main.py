@@ -39,11 +39,11 @@ def record_and_match(djv_copy):
             match = 1
         else:
             print("Not a match")
-        if match = 1:
-            push_service = FCMNotification(api_key="<api-key>")
-            registration_id = "<device registration_id>"
+        if match == 1:
+            push_service = FCMNotification(api_key="AAAAOZz1_28:APA91bETO_8C5y6TffjdXDVNVJi3J0koJF2EDxJ38WxRh1n3OpFQFfQ_cE3IYceq5nJS_hs2U6gb-G328aGGSvzvdOvR6gMHfyuLbBeHIcoWrLbFHO9jQ3_iN4UWYzWzOx6KFrRGmA_F")
+            registration_id = "f3GZVJlUplE:APA91bFeIxGox0A9RD1fhr_8zCJTfXBGIZLWKmWUkayE3gjKlMnEUiE2wbcwVPKa_bCBuzf0jyMZkCrfCsfypE1SgXY75LXDgbj0J5lLYcpCUJnXDpfy23NQzQ7A32HQHP6_2PTdFg8R"
             message_title = "Alert! Event Recognized."
-            message_body = st.split("_")[0]+"_"+st.split("_")[1]
+            message_body = result["song_name"].split("_")[0]+"_"+result["song_name"].split("_")[1]
             result = push_service.notify_single_device(registration_id=registration_id, message_title=message_title, message_body=message_body)
 
 while(1):
