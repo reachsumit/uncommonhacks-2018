@@ -14,8 +14,6 @@ Many of us know someone who is hard of hearing, if not completely deaf. Though n
 
 ## Getting Started
 
-To set up ...
-
 ### Prerequisites
 
 Audio fingerprinting and recognition is achieved by using dejavu Python library. Details about the underlying algorithm and the corresponding list of dependencies is available on the GitHub repository for dejavu. Install dejavu and all its dependent libararies to run the code given in this repository.
@@ -65,4 +63,3 @@ python main.py
 ## Acknowledgements
 
 * Uncommonhacks 2018
-
