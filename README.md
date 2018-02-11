@@ -22,19 +22,19 @@ Audio fingerprinting and recognition is achieved by using dejavu Python library.
 
 The MySQL database for storing audio fingerprints was hosted in cloud on Amazon RDS servers. The configuration file containing details of AWS credentials, is used in main.py and also excluded from this repository. General format for that configuration.config file should be as follows.
 
-```
-[configuration]
-aws_db_host = <link to database host>
-aws_db_name = <name of the database>
-aws_db_user = <database user name>
-aws_db_pwd = <password for the database user>
-```
-Firebase Cloud Messaging (FCM) is used to send push notifications to subscribed devices. pyfcm, the Python client for FCM, is used to trigger push notifications. pyfcm can be installed with pip using below commands:
+> [configuration]
+> aws_db_host = <link to database host>
+> aws_db_name = <name of the database>
+> aws_db_user = <database user name>
+> aws_db_pwd = <password for the database user>
+
+Firebase Cloud Messaging (FCM) is used to send push notifications to subscribed devices. pyfcm, the Python client for FCM, is used to trigger push notifications. pyfcm can be installed with pip using the commands below:
+
 ```
 pip install pyfcm
-
+```
 OR
-
+```
 pip install git+https://github.com/olucurious/PyFCM.git
 ```
 
@@ -42,7 +42,8 @@ pip install git+https://github.com/olucurious/PyFCM.git
 
 Python code given in main.py calculates the audio fingerprints and stores them in the MySQL database at Amazon RDS. Code in the same file also performs recordings of WINDOW_SIZE seconds(currently set to 3) via system microphone in separate threads. Each thread performs matching with the entries in the MySQL database and pushes successful match information to all the registered devices via Google Firebase Cloud Messaging service.
 
-Excecute the Python code in  main.py file as
+Excecute the Python code in main.py file with:
+
 ```
 python main.py
 ```
