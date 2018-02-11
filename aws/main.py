@@ -4,6 +4,7 @@ from dejavu import Dejavu
 #from dejavu.recognize import FileRecognizer
 from dejavu.recognize import MicrophoneRecognizer
 from pyfcm import FCMNotification
+import subprocess as sbp
 
 WINDOW_SIZE = 3
 
@@ -45,6 +46,7 @@ def record_and_match(djv_copy):
             message_title = "Alert! Event Recognized."
             message_body = result["song_name"].split("_")[0]+"_"+result["song_name"].split("_")[1]
             result = push_service.notify_single_device(registration_id=registration_id, message_title=message_title, message_body=message_body)
+            sbp.call(['notify-send',message_title,message_body])
 
 while(1):
     thread.start_new_thread( record_and_match, (djv, ) )
