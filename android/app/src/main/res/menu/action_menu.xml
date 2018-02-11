@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_messages"
+        android:title="@string/action_messages"
+        />
+    <item android:id="@+id/action_clips"
+        android:title="@string/action_clips"/>
+    <item android:id="@+id/action_upload"
+        android:title="@string/action_upload"/>
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings" />
+</menu>

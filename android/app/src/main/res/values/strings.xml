@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">ListenHear</string>
+    <string name="project_number"></string>
+    <string name="introduction">Welcome! </string>
+    <string name="clear_screen">Clear Screen</string>
+    <string name="first_launch">First Launch</string>
+    <string name="num_of_missed_messages">MissedMessageCount</string>
+    <string name="lines_of_message_count">LinesOfMessageCount</string>
+
+    <string name="notification_channel_id">id_listenhear</string>
+    <string name="notification_channel_name">ListenHear Notifications</string>
+    <string name="notification_channel_descript">Notifications on local sounds that ListenHear detects.</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_messages">View Messages</string>
+    <string name="action_clips">Voice Clips</string>
+    <string name="action_upload">Upload Files</string>
+
+    <string name="clip_introdeaf">Hi, I'm deaf!</string>
+    <string name="clip_help">I need help!</string>
+
+    <string name="preferences">PreferencesFile</string>
+    <string name="notification_number">1337</string>
+    <string name="refresh">Refresh</string>
+    <string name="default_registration">registration not found</string>
+    <string name="reason_need_vibrate">ListenHear wishes to use the phone's vibrate functionality to alert you about things we hear from day to day-- we promise not to bother you about anything else!</string>
+    <string name="ok">OK</string>
+</resources>
